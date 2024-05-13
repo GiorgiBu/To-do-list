@@ -1,0 +1,13 @@
+.container{
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(45deg, #a87519 20%, #0c468f 20%, #a87519 40%, #0c468f 40% , #a87519 80%, #0c468f 80%);
+}
+.main-content-wrapper{
+    width: 60%;
+    height: 81dvh;
+    margin-top: 4dvh;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+}
