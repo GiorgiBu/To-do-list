@@ -1,3 +1,16 @@
+:root{
+    --larger-text-font-size: 15px;
+    --larger-text-font-line-height: 15px;
+}
+/* common class >> */
+.larger-text-size{
+    font-size: var(--larger-text-font-size);
+    line-height: var(--larger-text-font-line-height);
+}
+
+
+/* <<common class */
+
 .container{
     height: 100dvh;
     display: flex;
