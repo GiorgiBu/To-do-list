@@ -1,15 +1,41 @@
 :root{
-    --larger-text-font-size: 15px;
-    --larger-text-font-line-height: 15px;
+    --larger-text-font-size: 25px;
+    --larger-text-font-line-height: 25px;
+    --primary-text-shadow-color: #0c468f;
+    --secondary-text-shadow-color: #a87519;
 }
 /* common class >> */
 .larger-text-size{
     font-size: var(--larger-text-font-size);
     line-height: var(--larger-text-font-line-height);
+    font-family: "play-fair-semoBold";
 }
-
-
+.primary-text-shadow{
+    text-shadow: 2px 2px 5px var(--primary-text-shadow-color);
+}
+.secondary-coloring{
+    width: fit-content;
+}
+.secondary-coloring > span:nth-child(2n){
+    text-shadow: 2px 2px 3px var(--primary-text-shadow-color);
+}
+.secondary-coloring > span:nth-child(2n + 1){
+    text-shadow: 2px 2px 3px var(--secondary-text-shadow-color);
+}
 /* <<common class */
+/* */
+.d-flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-items-center{
+    align-items: center;
+}
 
 .container{
     height: 100dvh;
@@ -23,4 +49,5 @@
     margin-top: 4dvh;
     background-color: white;
     border-radius: 10px 10px 10px 10px;
+    padding: 3% 4%;
 }
