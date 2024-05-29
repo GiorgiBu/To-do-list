@@ -49,3 +49,7 @@ table {
 ul, ol{
 	list-style-type: none;
 }
+input, button {
+	border: none;
+	outline: none;
+}
