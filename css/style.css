@@ -51,6 +51,9 @@
 .justify-content-center {
     justify-content: center;
 }
+.justify-content-between {
+    justify-content: space-between;
+}
 
 .align-items-center {
     align-items: center;
@@ -90,9 +93,9 @@
 }
 
 .add-to-do-form>input {
-    padding: 1em calc(var(--add-button-width)) 1em 0.6em;
+    padding: 1em calc(var(--add-button-width)) 1em 1.5em;
     background-color: var(--primary-grey);
-    border-radius: 30px;
+    border-radius: 1.7em;
 }
 
 .add-to-do-form>button {
@@ -105,4 +108,28 @@
     border-radius: 1.7em;
     background-image: linear-gradient(var(--primary-text-shadow-color), var(--secondary-text-shadow-color));
     position: absolute;
+}
+.added-to-do-ul{
+    row-gap: 15px;
+}
+.added-to-do-li{
+    padding: 0.9em 1.2em;
+    border-radius: 1.7em;
+    width: 100%;
+    background-color: var(--primary-grey);
+    border: 2px dashed black;
+}
+.li-left-side{
+    column-gap: 0.7em;
+}
+.mark-circle{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+.delete-svg:hover{
+    transform: scale(1.2);
+    transition: all 0.5s linear;
 }
