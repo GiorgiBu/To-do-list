@@ -51,6 +51,7 @@
 .justify-content-center {
     justify-content: center;
 }
+
 .justify-content-between {
     justify-content: space-between;
 }
@@ -63,8 +64,8 @@
     width: 100%;
 }
 
-.point-three-second-transition{
-    transition: all 0.3s ease-out;
+.w-100 {
+    width: 100%;
 }
 
 
@@ -110,10 +111,12 @@
     background-image: linear-gradient(var(--primary-text-shadow-color), var(--secondary-text-shadow-color));
     position: absolute;
 }
-.added-to-do-ul{
+
+.added-to-do-ul {
     row-gap: 15px;
 }
-.added-to-do-li{
+
+.added-to-do-li {
     padding: 0.9em 1.2em;
     border-radius: 1.7em;
     width: 100%;
@@ -121,34 +124,46 @@
     border: 2px dashed black;
     transition: all 0.3s ease-out;
 }
-.added-to-do-li.checked{
+
+.added-to-do-li.checked {
     background-color: #94b627;
 }
-.added-to-do-li.checked button.mark-circle{
+
+.added-to-do-li.checked button.mark-circle {
     background-color: #455511;
 }
-.li-left-side{
+
+.added-to-do-li.checked {
+    background-color: rgb(62, 214, 62);
+}
+
+.added-to-do-li.checked button.mark-circle {
+    background-color: rgb(105, 229, 105);
+}
+
+.li-left-side {
     column-gap: 0.7em;
 }
-.mark-circle{
+
+.mark-circle {
     width: 23px;
     height: 23px;
     border-radius: 50%;
     background-color: white;
     cursor: pointer;
 }
-.delete-svg{
-    background-color: inherit;
-}
-.delete-svg:hover{
+
+.delete-svg:hover {
     transform: scale(1.2);
     transition: all 0.5s linear;
 }
-.warning{
+
+.warning {
     align-self: center;
     color: #ac2912;
     display: none;
 }
-.warning.active{
+
+.warning.active {
     display: block;
 }
