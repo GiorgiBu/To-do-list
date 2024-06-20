@@ -64,8 +64,8 @@
     width: 100%;
 }
 
-.w-100 {
-    width: 100%;
+.point-three-second-transition{
+    transition: all 0.3s ease-out;
 }
 
 
@@ -124,6 +124,12 @@
     border: 2px dashed black;
     transition: all 0.3s ease-out;
 }
+.added-to-do-li.checked{
+    background-color: #94b627;
+}
+.added-to-do-li.checked button.mark-circle{
+    background-color: #455511;
+}
 
 .added-to-do-li.checked {
     background-color: #94b627;
@@ -152,8 +158,10 @@
     background-color: white;
     cursor: pointer;
 }
-
-.delete-svg:hover {
+.delete-svg{
+    background-color: inherit;
+}
+.delete-svg:hover{
     transform: scale(1.2);
     transition: all 0.5s linear;
 }
