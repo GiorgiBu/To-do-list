@@ -6,6 +6,7 @@
     --primary-text-shadow-color: #0c468f;
     --secondary-text-shadow-color: #a87519;
     --primary-grey: #efefef;
+    --dark-green: #455511;
     --add-button-width: 81px;
 }
 
@@ -77,6 +78,8 @@
 }
 
 .main-content-wrapper {
+    /* display: grid;
+    grid-template: auto minmax(100%, 100%) / 1fr; */
     row-gap: 20px;
     width: 50%;
     height: 81dvh;
@@ -87,8 +90,12 @@
 }
 
 .main-action-wrapper {
-    row-gap: 15px;
-    overflow-y: scroll;
+    height: 90%;
+    object-fit: cover;
+    gap: 15px;
+    /* overflow-y: scroll; */
+    display: grid;
+    grid-template: auto auto 1fr / 1fr;
 }
 
 .add-to-do-form {
@@ -115,7 +122,20 @@
 
 .added-to-do-ul {
     row-gap: 15px;
-    /* overflow-y: scroll; */
+    padding-right: 10px;
+    overflow-y: scroll;
+    scroll-snap-type: block mandatory;
+}
+.added-to-do-ul > * {
+    scroll-snap-align: start;
+}
+.added-to-do-ul::-webkit-scrollbar {
+    background-color: var(--dark-green);
+    border-radius: 4px;
+}
+.added-to-do-ul::-webkit-scrollbar-thumb {
+    background-color: #94b627;
+    border-radius: 4px;
 }
 
 .added-to-do-li {
@@ -130,23 +150,15 @@
     background-color: #94b627;
 }
 .added-to-do-li.checked button.mark-circle{
-    background-color: #455511;
+    background-color: var(--dark-green);
 }
 
 .added-to-do-li.checked {
     background-color: #94b627;
 }
 
-.added-to-do-li.checked button.mark-circle {
-    background-color: #455511;
-}
-
 .added-to-do-li.checked {
     background-color: rgb(62, 214, 62);
-}
-
-.added-to-do-li.checked button.mark-circle {
-    background-color: rgb(105, 229, 105);
 }
 
 .li-left-side {
@@ -176,4 +188,33 @@
 
 .warning.active {
     display: block;
+}
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .main-content-wrapper {
+        width: 65%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .main-content-wrapper {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 576px) {
+    :root {
+        --larger-text-font-size: 27px;
+        --larger-text-font-line-height: 29px;
+        --small-text-font-size: 16px;
+        --small-text-line-height: 20px;
+    }
+    .main-content-wrapper {
+        width: 95%;
+    }
+    .added-to-do-li {
+        padding: 0.7em 1em;
+    }
 }
